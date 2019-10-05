@@ -1,0 +1,59 @@
+#addRestaurant {
+  display: none;
+  position: absolute;
+  top: 12rem;
+  left: 1.4rem;
+  width: 100%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+#addRestaurant h4 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contactForm__input {
+  display: block;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #cdcfcf;
+  width: 100%;
+  font-size: 1.6rem;
+  transition: 150ms border-color linear;
+}
+
+.contactForm__input--textarea {
+  height: 10rem;
+  max-width: 22rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactForm__input--textarea::placeholder {
+  font-weight: 300;
+}
+
+.contactForm__input--select {
+  color: #777;
+}
+
+.contactForm__button {
+  font-size: 1.6rem !important;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  transition: background-color 0.5s;
+}
+
+.contactForm__button:hover {
+  color: #fff;
+  background-color: #a8a6a6;
+}
