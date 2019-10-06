@@ -1,0 +1,624 @@
+header {
+  height: 6rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: relative;
+
+  .col-12 {
+    padding: 0;
+    margin:0;
+  }
+
+  .logo {
+    width: 16.2rem;
+    height: auto;
+  }
+
+  .nav-top {
+    position: absolute;
+    top: 2.3rem;
+    right: 0;
+
+    .nav-item {
+      display: inline-block;
+      .nav-link {
+        font-size: 1.2rem;
+        color: $black-3; 
+        text-decoration: none;     
+      }
+
+      .fa-shopping-cart {
+        color: $green-1;
+      }
+
+      span {
+        margin-left: .5rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      .hide {
+        display: none;
+      }
+    }
+  }
+}
+
+// Hide hamburger menu border and outline
+.navbar-toggler {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+// header End 
+
+// Nav
+.navbar {
+  .nav-item {
+    display: inline-block;
+    // &:not(:last-child) {
+    //   margin-right: 3.5rem;
+    // }
+  }
+
+  .nav-link {  
+    padding: 1rem 2rem !important;
+    font-size: 1.6rem;
+    color: $white !important;
+    transition: all .2s;
+
+    &:hover {
+      background-color: $white;
+      color: $green-1 !important;
+    }
+  }
+
+  .sign-up {
+    background-color: $orange-1;
+    // border-radius: 50px;  
+  }
+}
+// Nav End
+
+
+// Hero
+.hero {
+  position: relative;
+  background-color: $grey-2;
+  h1 {
+    margin-bottom: 4rem;
+  }
+
+  &__toggle {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 10rem;
+
+    .minutes {
+      font-weight: 700;
+    }
+
+    .toggle-button {
+      margin: 0 2rem;
+    }
+
+    .unlimited {
+      color: $grey-1;
+    }
+  }
+
+  .toggle-1 {
+    width: 6.3rem;
+    height: 2.5rem;
+    background-color: $grey-1;
+    border-radius: 5rem;
+    position: relative;
+
+    .toggle-2 {
+      width: 2.3rem;
+      height: 2.3rem;
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      left: 1px;
+      top: 1px;
+    }
+  }
+
+  &__box {
+    background-color: $white;
+    text-align: center;
+    @include box-shadow-1;
+    padding: 3rem 0;
+    position: relative;
+    border-radius: .5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      &--1,
+      &--2 {
+        margin-bottom: 3rem;
+      } 
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      &--1,
+      &--2,
+      &--3 {
+        margin-bottom: 3rem;
+      } 
+    }
+    
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .button-started {
+      font-size: 1.6rem;
+      display: inline-block;
+      margin-bottom: 3rem;
+      padding: 1rem 5rem;
+      color: $white;
+      background-color: $green-2;
+      border-radius: 5rem;
+      border: 2px solid transparent;
+      transition: all .2s;
+       
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $green-2;
+        color: $green-2;
+      }
+    }
+
+    &--1 {
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &--2 {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &__guaranteed {
+    position: absolute;
+    top: -3rem;
+    left: -2rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__popular {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    position: absolute;
+    top: -3.3rem;
+    left: 0;
+    background-color: $orange-1;
+    width: 100%;
+    text-align: center;
+    p {
+      padding: 1rem 0 0 0 ;
+      color: $white;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    
+    margin-bottom: 3rem;
+    span {
+      vertical-align: top;
+    }
+
+    strong {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+// Hero End
+
+
+// All Plans
+.all {
+
+  h1 {
+    @include heading-1;    
+
+    @media only screen and (max-width: $bp-large) {
+      text-align: left;
+    }
+  }
+
+  .list {
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      // display: flex;
+      // flex-wrap: wrap;
+      // margin-left: 5rem;
+    }
+
+    &__item {
+      line-height: 2.4;
+
+      @media only screen and (max-width: $bp-large) {
+        // flex: 0 0 100%;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        // flex: 0 0 100%;
+      }
+    }
+
+    &__item::before {
+      content: "";
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 1rem;
+      background-image: url(../img/check-circle.svg);
+      background-size: cover;
+    }
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      &__item::before {
+        background-color: #8bc34a;
+        -webkit-mask-image: url(../img/check-circle.svg);
+        mask-image: url(../img/check-circle.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none;
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: 5rem;
+    text-align: center;
+
+    .button {
+      font-size: 1.4rem;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      transition: all .2s;
+
+      &--additional {
+        color: $black-3;
+        background-color: transparent;
+        border: 2px solid $orange-1;
+        margin-right: 2rem;
+        @media only screen and (max-width: $bp-small) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $orange-1;
+        }
+      }
+
+      &--view {
+        color: $white;
+        background-color: $green-2;
+        border: 2px solid $green-2;
+
+        &:hover {
+          color: $green-2;
+          background-color: transparent;
+        }
+      }
+      @media only screen and (max-width: $bp-small) {
+        display: block;
+      }
+    }
+  }
+}
+// All Plans End
+
+
+// Features
+.features {
+text-align: center;
+display: flex;
+background-color: $grey-2;
+
+&__box {
+
+  @media only screen and (max-width: $bp-large) {
+    &--1,
+    &--2 {
+      margin-bottom: 6rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    &--1,
+    &--2,
+    &--3 {
+      margin-bottom: 6rem;
+    }
+  }
+
+  h5 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+&__icon {
+  background-color: $green-4;
+  color: $white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+}
+}
+// Features End
+
+
+// Testimony
+.testimony {
+  h1 {
+    @include heading-1;
+  }
+
+  &__box {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__person {
+    margin-top: 5rem;
+
+    &--1,
+    &--3 {
+      margin-top: 7rem;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      &--3 {
+        margin-top: 5rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      &--3 {
+        margin-top: 7rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+  }
+
+  &__img {
+    float: left;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    float: left;
+    font-size: 1.4rem;
+    line-height: .7;
+    padding-top: 1.2rem;
+  }
+
+  &__store {
+    color: $green-2;
+  }
+}
+// Testimony End
+
+
+// Help
+.help {
+  background-color: $green-5;
+  &__text {
+    color: $white;
+    padding: 2rem 0;
+  }
+}
+// Help End
+
+
+// Client
+.client {
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    width: 6.4rem;
+    height: auto;
+
+    @media only screen and (max-width: $bp-smaller) {
+      width: 5rem;
+    }
+  }
+
+  &__box.hipaa {
+    width: 12.1rem;
+  }
+}
+// Client End
+
+
+// Footer
+.footer {
+  padding: 5rem;
+  background-color: $green-6;
+
+  &__box {
+    color: $white;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    line-height: 1.75;
+    a {
+      color: $white;
+    }
+  }
+
+  &__popular {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-large) {
+      justify-content: flex-start;
+    }
+
+    a {
+      color: $green-6;
+    }
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+// Footer End
+
+
+// Footer Bottom
+.footer__bottom {
+  padding: 3rem 0;
+  
+  &__box {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    margin-right: auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0 auto 3rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      line-height: 1.75;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    margin-right: .75rem;
+
+    a {
+      color: $green-6;
+
+      &:hover {
+        color: $black-3;
+      }
+    }
+
+    &:not(:first-child)::before {
+      content: "|";
+      margin-right: .75rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+      &:not(:first-child)::before {
+        content: "";
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__store {
+    width: 12rem;
+
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+// Footer Bottom End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
