@@ -1,0 +1,518 @@
+// Header
+header {
+  position: relative;
+}
+
+.headerTop {
+  padding: 1rem 0;
+  background-color: $black-3;
+  color: $white;
+  font-size: 1.4rem;
+  a {
+    color: $white;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.headerCenter {
+  padding: 1rem 0;
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 30rem;
+    @media only screen and (max-width: $bp-largest) {
+      width: 25rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 20rem;
+    }
+  }
+  &__search {
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2.5rem;
+    display: flex;
+    @media only screen and (max-width: $bp-largest) {
+      flex: 0 0 40%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex-grow: 2;
+      padding: 0;
+      flex: 0 0 50%;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      justify-content: flex-end;
+    }
+    &__input {
+      font-family: inherit;
+      padding: .75rem 1.5rem;
+      width: 90%;
+      font-size: 1.4rem;
+      border: 1px solid $blue-1;
+      @media only screen and (max-width: $bp-largest) {
+        width: 80%;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+      }
+      @media only screen and (max-width: $bp-smaller) {
+        display: none;
+      }
+    }
+    &__button {
+      cursor: pointer;
+      color: $white;
+      font-size: 1.4rem;
+      border: none;
+      padding: 1rem 1.5rem;
+      margin-left: -.2rem;
+      background-color: $blue-1;
+    }
+  }
+  &__shipping {
+    width: 13rem;
+    @media only screen and (max-width: $bp-largest) {
+      width: 10rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  font-size: 1.6rem;
+  padding: 1.5rem 0 1rem;
+  background-color: $blue-1;
+  position: relative;
+  &-nav {
+    margin: 0;
+  }
+  .nav__item {
+    margin: 0;
+  }
+  .nav-link {
+    color: $white !important;
+    margin: 0 3rem;
+    padding: 0 0 .5rem;
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  button {
+    align-items: flex-end;
+  }
+
+  &-toggler {
+    border: none;
+    margin-left: 1rem;
+    align-items: flex-end;
+  }
+}
+// Navbar End
+// Header End
+
+
+// Hero
+.hero {
+  background: url(../img/dist/hero_img-lg_2x.png) no-repeat center;
+  background-size: cover;
+  height: 52rem;
+
+  @media only screen and (max-width: $bp-small) {
+    background: url(../img/dist/hero_img-sm_1x.png) no-repeat center;
+    background-size: cover;
+    height: 40rem;
+  }
+}
+// Hero End
+
+
+// Why
+.why {
+  background-color: $grey-1;
+  font-size: 1.7rem;
+  h1 {
+    margin-bottom: 5rem;
+  }
+  &__box {
+    margin-bottom: 1rem;
+    text-align: center;
+    @media only screen and (max-width: $bp-large) {
+      &--1,
+      &--2 {
+        margin-bottom: 4rem;
+      }
+    }
+    @media only screen and (max-width: $bp-medium) {
+      &--3,
+        {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &__icon {
+    width: 5rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    width: 50%;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+}
+// Why End
+
+
+// Featured
+.featured {
+  text-align: center;
+  h2 {
+    margin-bottom: 5rem;
+  }
+  h4 {
+    margin-bottom: 1.3rem;
+  }
+  &__box {
+    text-align: center;
+    border: 1px solid $grey-2;
+    width: 20rem;
+    height: 17rem;
+    margin: 0 auto;
+    margin-bottom: 3.3rem;
+    &--1 {
+      background: url(../img/dist/C1.png) no-repeat center;
+      background-size: cover;
+    }
+    &--2 {
+      background: url(../img/dist/C2.png) no-repeat center;
+      background-size: cover;
+    }
+    &--3 {
+      background: url(../img/dist/C3.png) no-repeat center;
+      background-size: cover;
+    }
+    &--4 {
+      background: url(../img/dist/C4.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__button {
+    
+    &__buy {
+      padding: .7rem 2rem;
+      border-radius: .5rem;
+      background-color: $blue-1;
+      font-size: 1.2rem;
+      font-weight: 700;
+      &:link,
+      &:visited {
+        color: $white;
+      }
+      &:hover {
+        color: $black-3;
+      }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      &--1,
+      &--2 {
+        margin-bottom: 5rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      &--3 {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+// Featured End
+
+
+// Deal
+.deal {
+  padding-top: 0;
+  position: relative;
+
+  &__bg {
+    padding: 1rem;
+    background-color: $red-2;
+    h2 {
+      color: $white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    padding: 5rem 0;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: $white;
+    background-color: $yellow-1;
+
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
+  }
+
+  &__img {
+    width: 23rem;
+  }
+
+  &__detail {
+    position: relative;
+    font-size: 1.4rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    h4 {
+      font-weight: bold;
+      span {
+        color: $red-2;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-top: 1rem;
+    }
+  }
+
+  &__type {
+    color: $blue-1;
+  }
+
+  &__was {
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 2rem;
+    color: $red-2;
+  }
+
+  &__stock {
+    color: $red-2;
+  }
+
+  &__week {
+    position: absolute;
+    bottom: 5rem;
+    right: -10rem;
+    width: 25rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      bottom: 0;
+      right: -10rem;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+      display: none;
+    }
+  }
+}
+// Deal End
+
+
+// Client
+.client {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: $grey-2;
+
+  &__img {
+    width: 40rem;
+  }
+}
+// Client End
+
+
+// Who
+.who {
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  &__box {
+    h3 {
+      color: $red-2;
+      margin-bottom: 2rem;
+    } 
+
+    &--1 {
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      background-color: $red-2;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      margin-left: -1.7rem;
+      content: '';
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    flex: 0 0 50%;
+  }
+}
+
+.newsletter {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 2rem;
+    color: $blue-1;
+    margin: 0;
+    margin-right: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 2rem;
+      margin-right: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex: 0 0 50%;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__input {
+    border: 1px solid $blue-1;
+    padding: .5rem 2rem;
+    width: 60%;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      padding: .5rem 1rem;
+    }
+  }
+
+  &__button {
+    border: 1px solid $blue-1;
+    padding: .5rem 1rem;
+    background-color: $blue-1;
+    color: $white;
+    margin-left: -.5rem;
+  }
+}
+// Who End
+
+
+// Footer
+.footer {
+  background-color: $black-3;
+  padding: 3rem 0;
+  color: $white;
+  font-size: 1.2rem;
+  line-height: 1.75;
+
+  &__box {
+    @media only screen and (max-width: $bp-medium) {
+      &--1,
+      &--2 {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 50%;
+  }
+
+  &__social {
+   a {
+     font-size: 1.5rem;
+    color: $white;
+    margin-right: 1rem;
+   }
+  }
+}
+
+.footerBottom {
+  padding: 1.5rem;
+  background-color: $black-9;
+  color: $white;
+  font-size: 12px;
+  font-weight: 400;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+// Footer End
