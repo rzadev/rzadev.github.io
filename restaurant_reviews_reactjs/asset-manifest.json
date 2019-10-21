@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/restaurant_reviews_reactjs/static/css/main.74462df2.chunk.css",
+    "main.js": "/restaurant_reviews_reactjs/static/js/main.bcb415c8.chunk.js",
+    "main.js.map": "/restaurant_reviews_reactjs/static/js/main.bcb415c8.chunk.js.map",
+    "runtime~main.js": "/restaurant_reviews_reactjs/static/js/runtime~main.25f7223f.js",
+    "runtime~main.js.map": "/restaurant_reviews_reactjs/static/js/runtime~main.25f7223f.js.map",
+    "static/js/2.730fe551.chunk.js": "/restaurant_reviews_reactjs/static/js/2.730fe551.chunk.js",
+    "static/js/2.730fe551.chunk.js.map": "/restaurant_reviews_reactjs/static/js/2.730fe551.chunk.js.map",
+    "index.html": "/restaurant_reviews_reactjs/index.html",
+    "precache-manifest.295c975d912ce9d77f8ff8f4b17456b9.js": "/restaurant_reviews_reactjs/precache-manifest.295c975d912ce9d77f8ff8f4b17456b9.js",
+    "service-worker.js": "/restaurant_reviews_reactjs/service-worker.js",
+    "static/css/main.74462df2.chunk.css.map": "/restaurant_reviews_reactjs/static/css/main.74462df2.chunk.css.map"
+  }
+}
